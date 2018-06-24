@@ -14,7 +14,7 @@ import WrappingRoute from '~/shared/components/route';
 import App from '~/app/app.js';
 import Styleguide from '~/styleguide';
 
-// route
+// root
 
 const Root = () => {
   return (
