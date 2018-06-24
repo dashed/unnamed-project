@@ -3,10 +3,11 @@
 // 3rd-party imports
 
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 
 // local imports
 
+import WrappingRoute from '~/shared/components/route';
 import Hello from './hello.mdx';
 
 // components
@@ -19,8 +20,8 @@ const App = () => {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/hello" component={Hello} />
+        <WrappingRoute exact path="/" component={Home} />
+        <WrappingRoute path="/hello" component={Hello} />
       </Switch>
     </div>
   );

@@ -5,9 +5,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 // local imports
+
+import WrappingRoute from '~/shared/components/route';
 
 import App from '~/app/app.js';
 import Styleguide from '~/styleguide';
@@ -18,8 +20,8 @@ const Root = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/styleguide" component={Styleguide} />
-        <Route path="/" component={App} />
+        <WrappingRoute path="/styleguide" component={Styleguide} />
+        <WrappingRoute path="/" component={App} />
       </Switch>
     </Router>
   );

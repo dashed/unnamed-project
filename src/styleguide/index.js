@@ -3,7 +3,11 @@
 // 3rd-party imports
 
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+
+// local imports
+
+import WrappingRoute from '~/shared/components/route';
 
 // component
 
@@ -22,8 +26,8 @@ const Styleguide = props => {
     <div>
       Styleguide
       <Switch>
-        <Route exact path={`${path}/`} component={Home} />
-        <Route path={`${path}/colors`} component={Colors} />
+        <WrappingRoute exact path={`${path}/`} component={Home} />
+        <WrappingRoute path={`${path}/colors`} component={Colors} />
       </Switch>
     </div>
   );
