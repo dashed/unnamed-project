@@ -5,6 +5,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 // local imports
 
 import App from '~/app/app.js';
@@ -13,7 +15,14 @@ import Styleguide from '~/styleguide';
 // route
 
 const Root = () => {
-  return <div />;
+  return (
+    <Router>
+      <Switch>
+        <Route path="/styleguide" component={Styleguide} />
+        <Route path="/" component={App} />
+      </Switch>
+    </Router>
+  );
 };
 
 // mount app
