@@ -7,12 +7,19 @@ import ReactDOM from 'react-dom';
 
 // local imports
 
-import App from '~/app';
+import App from '~/app/app.js';
+import Styleguide from '~/styleguide';
+
+// route
+
+const Root = () => {
+  return <div />;
+};
 
 // mount app
 
 const mount = document.getElementById('root');
 
 if (mount) {
-  ReactDOM.render(<App />, mount);
+  ReactDOM.render(<Root />, mount);
 }
