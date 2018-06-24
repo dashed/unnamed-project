@@ -2,8 +2,8 @@
 
 // 3rd-party imports
 
-import React from 'react';
-import { Route } from 'react-router-dom';
+import * as React from 'react';
+import { Route, type ContextRouter } from 'react-router-dom';
 
 // component
 
@@ -13,7 +13,11 @@ import { Route } from 'react-router-dom';
 // to the component prop, you would create a new component every render. This results in the existing
 // component unmounting and the new component mounting instead of just updating the existing component.
 
-const WrappingRoute = ({ component: Component, ...rest }) => {
+type Props = {
+  component: React.ComponentType<ContextRouter>
+};
+
+const WrappingRoute = ({ component: Component, ...rest }: Props) => {
   return (
     <Route
       {...rest}

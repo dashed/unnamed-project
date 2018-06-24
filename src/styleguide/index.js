@@ -3,7 +3,7 @@
 // 3rd-party imports
 
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, type ContextRouter } from 'react-router-dom';
 
 // local imports
 
@@ -19,7 +19,7 @@ const Colors = () => {
   return <div>Colors</div>;
 };
 
-const Styleguide = props => {
+const Styleguide = (props: ContextRouter) => {
   const { path } = props.match;
 
   return (

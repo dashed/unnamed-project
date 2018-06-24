@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 
 // local imports
 
-import App from '~/app';
+import App from './app';
 
 // tests
 
