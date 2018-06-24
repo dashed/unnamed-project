@@ -6,7 +6,7 @@ import React from 'react';
 
 // local imports
 
-import Hello from './hello.mdx';
+import Hello from '~/hello.mdx';
 
 // components
 
